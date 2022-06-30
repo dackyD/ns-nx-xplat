@@ -1,0 +1,101 @@
+{
+  "root": "apps/web-tasks",
+  "projectType": "application",
+  "sourceRoot": "apps/web-tasks/src",
+  "prefix": "nuvious",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/web-tasks",
+        "index": "apps/web-tasks/src/index.html",
+        "main": "apps/web-tasks/src/main.ts",
+        "polyfills": "apps/web-tasks/src/polyfills.ts",
+        "tsConfig": "apps/web-tasks/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/web-tasks/src/favicon.ico",
+          "apps/web-tasks/src/assets"
+        ],
+        "styles": [
+          "libs/xplat/web/scss/src/_index.scss",
+          "apps/web-tasks/src/styles.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/web-tasks/src/environments/environment.ts",
+              "with": "apps/web-tasks/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "web-tasks:build:production"
+        },
+        "development": {
+          "browserTarget": "web-tasks:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "web-tasks:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/web-tasks/**/*.ts",
+          "apps/web-tasks/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/web-tasks"
+      ],
+      "options": {
+        "jestConfig": "apps/web-tasks/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

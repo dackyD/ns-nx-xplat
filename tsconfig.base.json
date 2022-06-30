@@ -14,7 +14,16 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nuvious/xplat/core": ["libs/xplat/core/src/index.ts"],
+      "@nuvious/xplat/environments": [
+        "libs/xplat/core/src/lib/environments/base/index.ts"
+      ],
+      "@nuvious/xplat/features": ["libs/xplat/features/src/index.ts"],
+      "@nuvious/xplat/utils": ["libs/xplat/utils/src/index.ts"],
+      "@nuvious/xplat/web/core": ["libs/xplat/web/core/src/index.ts"],
+      "@nuvious/xplat/web/features": ["libs/xplat/web/features/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

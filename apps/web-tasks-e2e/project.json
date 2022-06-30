@@ -1,0 +1,35 @@
+{
+  "root": "apps/web-tasks-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/web-tasks-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/web-tasks-e2e/cypress.json",
+        "devServerTarget": "web-tasks:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "web-tasks:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/web-tasks-e2e/**/*.{js,ts}"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": [
+    "web-tasks"
+  ]
+}
