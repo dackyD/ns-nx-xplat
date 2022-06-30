@@ -8,7 +8,10 @@
     "test": "nx test",
     "postinstall": "ngcc --properties es2020 browser module main",
     "web-tasks:serve": "nx run web-tasks:serve",
-    "clean": "npx rimraf hooks node_modules package-lock.json yarn.lock && yarn"
+    "clean": "npx rimraf hooks node_modules package-lock.json yarn.lock && yarn",
+    "ns-tasks-run:ios": "nx run nativescript-tasks:ios",
+    "ns-tasks-run:android": "nx run nativescript-tasks:android",
+    "ns-tasks:clean": "nx run nativescript-tasks:clean"
   },
   "private": true,
   "devDependencies": {
