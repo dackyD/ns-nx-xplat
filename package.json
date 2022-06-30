@@ -7,14 +7,15 @@
     "build": "nx build",
     "test": "nx test",
     "postinstall": "ngcc --properties es2020 browser module main",
-    "web-tasks:serve": "nx run web-tasks:serve"
+    "web-tasks:serve": "nx run web-tasks:serve",
+    "clean": "npx rimraf hooks node_modules package-lock.json yarn.lock && yarn"
   },
   "private": true,
   "devDependencies": {
-    "@angular-devkit/build-angular": "~14.0.0",
-    "@angular-eslint/eslint-plugin": "~13.2.1",
-    "@angular-eslint/eslint-plugin-template": "~13.2.1",
-    "@angular-eslint/template-parser": "~13.2.1",
+    "@angular-devkit/build-angular": "^14.0.0",
+    "@angular-eslint/eslint-plugin": "~13.5.0",
+    "@angular-eslint/eslint-plugin-template": "~13.5.0",
+    "@angular-eslint/template-parser": "~13.5.0",
     "@angular/cli": "~14.0.0",
     "@angular/compiler-cli": "^14.0.0",
     "@angular/language-service": "^14.0.0",
@@ -34,7 +35,7 @@
     "@typescript-eslint/eslint-plugin": "~5.10.0",
     "@typescript-eslint/parser": "~5.10.0",
     "cypress": "^9.1.0",
-    "eslint": "~8.7.0",
+    "eslint": "8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "27.2.3",
@@ -43,7 +44,14 @@
     "prettier": "^2.5.1",
     "ts-jest": "27.0.5",
     "ts-node": "~10.8.0",
-    "typescript": "~4.6.2"
+    "typescript": "~4.6.2",
+    "@nstudio/nativescript-angular": "14.3.0",
+    "@nstudio/nativescript": "14.3.0",
+    "sass": "^1.30.0",
+    "@nativescript/types": "~8.2.0",
+    "@nativescript/eslint-plugin": "~0.0.4",
+    "@nativescript/webpack": "~5.0.0",
+    "@ngtools/webpack": "^14.0.0"
   },
   "dependencies": {
     "@angular/animations": "^14.0.0",
@@ -58,9 +66,13 @@
     "@ngx-translate/http-loader": "~7.0.0",
     "@nuvious/xplat-scss": "file:libs/xplat/scss/src",
     "core-js": "^3.6.5",
-    "rxjs": "^7.5.0",
+    "rxjs": "^7.4.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@nativescript/core": "~8.2.0",
+    "nativescript-theme-core": "^1.0.4",
+    "@nativescript/angular": "^14.0.0",
+    "nativescript-ngx-fonticon": "~7.0.0"
   },
   "xplat": {
     "prefix": "nuvious",

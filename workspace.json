@@ -1,10 +1,15 @@
 {
   "version": 2,
   "projects": {
+    "nativescript-tasks": "apps/nativescript-tasks",
     "web-tasks": "apps/web-tasks",
     "web-tasks-e2e": "apps/web-tasks-e2e",
     "xplat-core": "libs/xplat/core",
     "xplat-features": "libs/xplat/features",
+    "xplat-nativescript-core": "libs/xplat/nativescript/core",
+    "xplat-nativescript-features": "libs/xplat/nativescript/features",
+    "xplat-nativescript-scss": "libs/xplat/nativescript/scss",
+    "xplat-nativescript-utils": "libs/xplat/nativescript/utils",
     "xplat-scss": "libs/xplat/scss",
     "xplat-utils": "libs/xplat/utils",
     "xplat-web-core": "libs/xplat/web/core",
