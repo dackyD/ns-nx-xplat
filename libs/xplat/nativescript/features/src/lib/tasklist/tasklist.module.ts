@@ -9,4 +9,4 @@ import { TASKLIST_COMPONENTS } from './components';
   exports: [...TASKLIST_COMPONENTS],
   schemas: [NO_ERRORS_SCHEMA],
 })
-export class TasklistModule {}
+export class TaskListModuleNativeScript {}
