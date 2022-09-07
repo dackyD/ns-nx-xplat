@@ -21,6 +21,14 @@
               "with": "./src/environments/environment.prod.ts"
             }
           ]
+        },
+        "dev": {
+          "fileReplacements": [
+            {
+              "replace": "../../libs/xplat/core/src/lib/environments/environment.ts",
+              "with": "./src/environments/environment.dev.ts"
+            }
+          ]
         }
       }
     },
@@ -35,6 +43,9 @@
         },
         "prod": {
           "combineWithConfig": "build:prod"
+        },
+        "dev": {
+          "combineWithConfig": "build:dev"
         }
       }
     },
@@ -49,6 +60,9 @@
         },
         "prod": {
           "combineWithConfig": "build:prod"
+        },
+        "dev": {
+          "combineWithConfig": "build:dev"
         }
       }
     },

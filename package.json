@@ -10,6 +10,7 @@
     "web-tasks:serve": "nx run web-tasks:serve",
     "clean": "npx rimraf hooks node_modules package-lock.json yarn.lock && yarn",
     "ns-tasks-run:ios": "nx run nativescript-tasks:ios",
+    "ns-tasks-run:ios:dev": "nx run nativescript-tasks:ios --configuration=dev",
     "ns-tasks-run:android": "nx run nativescript-tasks:android",
     "ns-tasks:clean": "nx run nativescript-tasks:clean"
   },

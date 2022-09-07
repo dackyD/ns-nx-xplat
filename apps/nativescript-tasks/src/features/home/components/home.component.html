@@ -7,5 +7,15 @@
       class="h1 p-10 text-center"
     ></Label>
     <nuvious-tasklist></nuvious-tasklist>
+    <Label [text]="'Environment Info'"></Label>
+    <FlexboxLayout>
+    <Label [text]="'Production: '"></Label>
+    <Label [text]="env.production"></Label>
+    </FlexboxLayout>
+
+    <FlexboxLayout>
+      <Label [text]="'Environment Name: '"></Label>
+      <Label [text]="env.environmentName"></Label>
+    </FlexboxLayout>
   </StackLayout>
 </GridLayout>

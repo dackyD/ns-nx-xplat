@@ -3,4 +3,5 @@
  */
 export interface IEnvironment {
   production?: boolean;
+  environmentName?: string;
 }
